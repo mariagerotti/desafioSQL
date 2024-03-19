@@ -52,7 +52,7 @@ CREATE INDEX IDX_CDSUPPLIER ON PRODUCT(CDSUPPLIER);
 --deu certo :)
 --/E)/-------------------------------------------------------------------------------------
 CREATE INDEX IDX_CDCOSTUMER ON REQUEST(CDCOSTUMER);
-deu certo :)
+--deu certo :)
 --/F)/-------------------------------------------------------------------------------------
 ALTER TABLE SUPPLIER ADD DSADRESS varchar(150);
 --deu certo :)
