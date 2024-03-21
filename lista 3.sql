@@ -1,4 +1,4 @@
-/A)/---------------------------------------------------------------------
+--/A)/---------------------------------------------------------------------
 SELECT 
 PRODUCT.NMPRODUCT,
 PRODUCT.VLPRICE,
@@ -11,7 +11,7 @@ FROM PRODUCT JOIN SUPPLIER ON PRODUCT.CDSUPPLIER = SUPPLIER.CDSUPPLIER
     WHERE (VLPRICE - (VLPRICE * 0.1)) > 15
 
 ORDER BY NMPRODUCT, VLPRICE
-/B)/---------------------------------------------------------------------
+--/B)/---------------------------------------------------------------------
 SELECT 
 NMPRODUCT, 
 SUPPLIER.NMSUPPLIER, 
@@ -24,16 +24,16 @@ ON PRODUCT.CDSUPPLIER = SUPPLIER.CDSUPPLIER
 WHERE (VLPRICE * QTSTOCK) > 12000
 
 ORDER BY SUPPLIER.NMSUPPLIER,PRODUCT.NMPRODUCT
-/C)/---------------------------------------------------------------------
+--/C)/---------------------------------------------------------------------
 SELECT * FROM CUSTOMER 
 WHERE IDFONE<>NULL AND NMCUSTOMER LIKE 'J%' 
 ORDER BY NMCUSTOMER
-/D)/---------------------------------------------------------------------
+--/D)/---------------------------------------------------------------------
 SELECT PRODUCT.NMPRODUCT,PRODUCT.VLPRICE,SUPPLIER.NMSUPPLIER 
 FROM PRODUCT JOIN SUPPLIER ON PRODUCT.CDSUPPLIER = SUPPLIER.CDSUPPLIER
 WHERE SUPPLIER.NMSUPPLIER LIKE '%ICA%'
 ORDER BY SUPPLIER.NMSUPPLIER
-/E)/---------------------------------------------------------------------
+--/E)/---------------------------------------------------------------------
 SELECT 
 SUPPLIER.NMSUPPLIER, 
 SUPPLIER.IDFONE, 
@@ -43,7 +43,7 @@ VLPRICE,
 FROM PRODUCT JOIN SUPPLIER ON PRODUCT.CDSUPPLIER = SUPPLIER.CDSUPPLIER
 WHERE NMPRODUCT LIKE 'S%' AND VLPRICE > 50
 ORDER BY NMSUPPLIER, VLPRICE
-/F)/---------------------------------------------------------------------
+--/F)/---------------------------------------------------------------------
 SELECT 
 CUSTOMER.NMCUSTOMER,
 PRODUCT.NMPRODUCT,
@@ -62,7 +62,7 @@ JOIN CUSTOMER ON CUSTOMER.CDCUSTOMER = REQUEST.CDCUSTOMER
 JOIN PRODUCT ON PRODUCT.CDPRODUCT = PRODUCTREQUEST.CDPRODUCT
 
 WHERE QTAMOUNT < 600 AND DTREQUEST BETWEEN '2003-08-01' AND '2003-08-31' AND PRODUCT.NMPRODUCT LIKE 'M%'
-/G)/---------------------------------------------------------------------
+--/G)/---------------------------------------------------------------------
 SELECT 
 CUSTOMER.NMCUSTOMER, 
 PRODUCT.NMPRODUCT, 
