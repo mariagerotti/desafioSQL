@@ -1,0 +1,31 @@
+--/PARTE 1 DA LISTA/--------------------------------------------------------------------
+--/A)/--------------------------------------------------------------------
+--DELETE FROM CUSTOMER
+--WHERE CDCUSTOMER NOT IN (SELECT CDCUSTOMER FROM REQUEST)
+--/B)/--------------------------------------------------------------------
+--DELETE FROM SUPPLIER 
+--WHERE CDSUPPLIER NOT IN (SELECT CDSUPPLIER FROM PRODUCT)
+--/C)/--------------------------------------------------------------------
+--UPDATE PRODUCTREQUEST
+--SET VLUNITARY = PRODUCT.VLPRICE
+--FROM PRODUCTREQUEST INNER JOIN PRODUCT ON PRODUCTREQUEST.CDPRODUCT = PRODUCT.CDPRODUCT
+--/D)/--------------------------------------------------------------------
+--ALTER TABLE SUPPLIER
+--ADD DSSTATUS VARCHAR(10)
+--/E)/--------------------------------------------------------------------
+--UPDATE SUPPLIER
+--SET DSSTATUS = 'INATIVO'
+--FROM SUPPLIER JOIN PRODUCT ON SUPPLIER.CDSUPPLIER = PRODUCT.CDSUPPLIER
+--WHERE SUPPLIER.CDSUPPLIER NOT LIKE PRODUCT.CDSUPPLIER
+--/F)/--------------------------------------------------------------------
+--UPDATE CUSTOMER
+--SET NMADRESS = 'DESCONHECIDO'
+--WHERE NMADRESS IS NULL
+--/G)/--------------------------------------------------------------------
+--INSERT INTO PRODUCTREQUEST (CDREQUEST, CDPRODUCT, QTAMOUNT, VLUNITARY)
+--SELECT PRODUCTREQUEST.CDREQUEST, PRODUCT.CDPRODUCT, 10, PRODUCT.VLPRICE
+--FROM PRODUCTREQUEST 
+--JOIN PRODUCT ON PRODUCT.CDPRODUCT = PRODUCTREQUEST.CDPRODUCT
+--JOIN REQUEST ON PRODUCTREQUEST.CDREQUEST = REQUEST.CDREQUEST
+--/PARTE 2 DA LISTA/--------------------------------------------------------------------
+--/A)/--------------------------------------------------------------------
